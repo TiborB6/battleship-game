@@ -70,6 +70,11 @@ function createBot() {
       submarine: createShip(3),
       partol: createShip(2),
     },
+
+    chooseAttackCoords() {
+      //
+    },
+
   };
 }
 

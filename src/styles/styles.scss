@@ -1,0 +1,85 @@
+$primary-color: white;
+$secondary-color: #646464;
+$background-color: #1f2937;
+$highlight: #c3cde6;
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+
+  background-color: $background-color;
+
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:5vh 15vw 5vh 15vw;
+  color: $primary-color;
+
+  button {
+    background-color: $secondary-color;
+    color: $primary-color;
+
+    border: none;
+    height: 40px;
+    width: 120px;
+
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.03);
+      cursor: pointer;
+    }
+  }
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+}
+
+.gamefield {
+  display: grid;
+  grid-template-columns: repeat(10, 2.5vw);
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: $secondary-color;
+  background-color: $primary-color;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  .ship-high {
+    background-color: rgba(0, 0, 0, 0.4)!important;
+  }
+
+  .square {
+    width: 2.5vw;
+    height: 2.5vw;
+    aspect-ratio: 1 / 1;
+    background-color: $primary-color;
+    border: 0.2px solid $secondary-color;
+    transition: background-color 0.2s ease-in-out;
+
+    display: grid;
+    place-items: center;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $highlight;
+    }
+
+    .red {
+      width: 100%;
+      height: 100%;
+    }
+
+    .gray {
+      width: 20%;
+      height: 20%;
+    }
+  }
+}
